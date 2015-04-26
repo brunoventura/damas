@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chaordic - Damas</title>
+	<style type="text/css">
+		body{
+		    margin:0px;
+		    background:#000;
+		    font-family: "Arial"
+		}
+		header {
+		    height:50px;
+		    background:#F0F0F0;
+		    border:1px solid #CCC;
+		    width:960px;
+		    margin:0px auto;
+		    text-align: center;
+		}
+		header h1 {
+			margin: 5px;
+		}
+		main {
+		    width:960px;
+		    background: #F0F0F0;
+		    border: 1px solid #CCC;
+		    height: 2000px;
+		    margin: 20px auto;
+		}
+		.board {
+			width:500px;
+		    height:496px;
+		    border:1px solid black;
+		    margin: 20px auto;
+		}
+		.cell {
+			width:12.5%;
+			height: 12.5%;
+			float:left;
+			background-color: #fff;
+		}
+		.cell:hover {
+    		background-color: yellow;
+		}
+		.cell-white {
+			background-color: #fff;
+		}
+		.cell-black {
+			background-color: #0f0f0f;
+		}
+		.selected {
+			box-sizing:border-box;
+			  -moz-box-sizing:border-box;
+			  -webkit-box-sizing:border-box;
+			border: 2px solid red; 
+		}
+		.highlight {
+			background-color: blue;
+			cursor: pointer;
+		}
+		img {
+			width: 90%;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Damas.js<h1>
+	</header>
+	<main></main>
+	<footer></footer>
+
+	<script src="app.js" ></script>
+</body>
+</html>
