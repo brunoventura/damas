@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Chaordic - Damas</title>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
 	<style type="text/css">
 		body{
 		    margin:0px;
@@ -31,6 +32,7 @@
 		}
 		main {
     		-webkit-perspective: 300;
+    		perspective: 300;
 		    width:960px;
 		    background: #F0F0F0;
 		    border: 1px solid #CCC;
@@ -39,7 +41,9 @@
 		}
 		.board {
 			text-align: center;
+			-ms-transform: rotateX(8deg);
 			-webkit-transform: rotateX(8deg);
+			transform: rotateX(8deg);
 			width:500px;
 		    height:456px;
 		    border:1px solid black;
@@ -79,6 +83,12 @@
 		}
 		#white-counter, #black-counter {
 			display: inline;
+			margin-right: 5px
+		}
+		#white-counter span, #black-counter span{
+			color: #2980b9;
+			font-weight: bolder;
+			font-size: 30px;
 		}
 		footer {
 		    background:#F0F0F0;
@@ -133,8 +143,8 @@
 	<section id="info">
 		<h1>TURNO: <span></span></h1>
 		<div>
-			<div id="white-counter">Peças Brancas: <span></span></div>
-			<div id="black-counter">Peças Pretas: <span></span></div>
+			<div id="white-counter">PeÃ§as Brancas: <span></span></div>
+			<div id="black-counter">PeÃ§as Pretas: <span></span></div>
 		</div>
 		<button class="btn" onclick="init()">Reiniciar</button>
 	</section>
