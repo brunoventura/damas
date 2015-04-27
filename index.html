@@ -5,7 +5,7 @@
 	<style type="text/css">
 		body{
 		    margin:0px;
-		    background:#000;
+		    background: #2980b9;
 		    font-family: "Arial"
 		}
 		header {
@@ -19,18 +19,34 @@
 		header h1 {
 			margin: 5px;
 		}
-		main {
+		header h1 span {
+			color: #2980b9;
+		}
+		section {
+			text-align: center;
 		    width:960px;
 		    background: #F0F0F0;
 		    border: 1px solid #CCC;
-		    height: 2000px;
+		    margin: 20px auto;
+		}
+		main {
+    		-webkit-perspective: 300;
+		    width:960px;
+		    background: #F0F0F0;
+		    border: 1px solid #CCC;
+		    height: 550px;
 		    margin: 20px auto;
 		}
 		.board {
+			text-align: center;
+			-webkit-transform: rotateX(8deg);
 			width:500px;
-		    height:496px;
+		    height:456px;
 		    border:1px solid black;
 		    margin: 20px auto;
+		}
+		.row {
+			height: 12.5%;
 		}
 		.cell {
 			width:12.5%;
@@ -57,19 +73,78 @@
 			background-color: blue;
 			cursor: pointer;
 		}
-		img {
+		.board img {
 			width: 90%;
 			cursor: pointer;
+		}
+		#white-counter, #black-counter {
+			display: inline;
+		}
+		footer {
+		    background:#F0F0F0;
+		    border:1px solid #CCC;
+		    width:960px;
+		    margin:0px auto;
+		    text-align: center;
+		}
+		footer li { 
+			display: inline;
+			margin-top: -20px;
+		}
+		footer span { 
+		}
+		footer img { 
+			height: 30px;
+		}
+		.btn {
+			position: relative;
+			vertical-align: top;
+			width: 150px;
+			height: 45px;
+			margin: 10px;
+			padding: 0;
+			font-size: 22px;
+			color: white;
+			text-align: center;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+			background: #2980b9;
+			border: 0;
+			border-bottom: 2px solid #2980b9;
+			cursor: pointer;
+			-webkit-box-shadow: inset 0 -2px #2475ab;
+			box-shadow: inset 0 -2px #2475ab;
+		}
+		.btn:active {
+			top: 1px;
+			outline: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+		.btn:hover {
+			background: #2475ab;
 		}
 
 	</style>
 </head>
 <body>
 	<header>
-		<h1>Damas.js<h1>
+		<h1>Damas.<span>js</span><h1>
 	</header>
+	<section id="info">
+		<h1>TURNO: <span></span></h1>
+		<div>
+			<div id="white-counter">Peças Brancas: <span></span></div>
+			<div id="black-counter">Peças Pretas: <span></span></div>
+		</div>
+		<button class="btn" onclick="init()">Reiniciar</button>
+	</section>
 	<main></main>
-	<footer></footer>
+	<footer>
+		<ul>
+			<li><a href="https://github.com/brunoventura/"><img src='img/github.png' /></a></li>
+			<li><a href="https://www.linkedin.com/profile/preview?locale=en_US&trk=prof-0-sb-preview-primary-button"><img src='img/linkedin-icon.png' /></a></li>
+		</ul>
+	</footer>
 
 	<script src="app.js" ></script>
 </body>
